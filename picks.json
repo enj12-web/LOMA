@@ -3,61 +3,61 @@
   "active_event_name": "PGA Championship",
   "tournament_rounds": 4,
   "teams": {
-    "Team Eric": [
+    "EJ": [
       "Scottie Scheffler",
-      "Rory McIlroy",
-      "Jon Rahm",
-      "Xander Schauffele",
-      "Ludvig Aberg",
-      "Collin Morikawa"
+      "Chris Gotterup",
+      "Justin Rose",
+      "Nicolai Højgaard",
+      "Collin Morikawa",
+      "Shane Lowry"
     ],
-    "Team B": [
-      "Bryson DeChambeau",
-      "Justin Thomas",
-      "Brooks Koepka",
-      "Hideki Matsuyama",
-      "Tony Finau",
+    "RJ": [
+      "Rory McIlroy",
+      "Patrick Reed",
+      "Tyrrell Hatton",
+      "Adam Scott",
+      "Min Woo Lee",
+      "Robert MacIntyre"
+    ],
+    "Yates": [
+      "Xander Schauffele",
+      "Jon Rahm",
+      "Viktor Hovland",
+      "Jordan Spieth",
+      "Si Woo Kim",
       "Patrick Cantlay"
     ],
-    "Team C": [
-      "Jordan Spieth",
-      "Wyndham Clark",
-      "Sam Burns",
-      "Tommy Fleetwood",
-      "Viktor Hovland",
-      "Russell Henley"
-    ],
-    "Team D": [
-      "Joaquin Niemann",
-      "Sahith Theegala",
-      "Sungjae Im",
-      "Cameron Smith",
-      "Min Woo Lee",
-      "Tyrrell Hatton"
-    ],
-    "Team E": [
-      "Maverick McNealy",
-      "Akshay Bhatia",
-      "Sepp Straka",
-      "Robert MacIntyre",
-      "Shane Lowry",
-      "Adam Scott"
-    ],
-    "Team F": [
-      "Cameron Young",
+    "Stude": [
+      "Bryson DeChambeau",
+      "Brooks Koepka",
+      "Rickie Fowler",
+      "J.J. Spaun",
       "Keegan Bradley",
-      "Will Zalatoris",
-      "Tom Kim",
-      "Si Woo Kim",
-      "Matt Fitzpatrick"
+      "Gary Woodland"
     ],
-    "Team G": [
+    "MJ": [
+      "Cameron Young",
+      "Tommy Fleetwood",
+      "Justin Thomas",
       "Corey Conners",
-      "Adam Hadwin",
-      "Chris Kirk",
-      "Sungjae Im",
-      "Justin Rose",
-      "Jason Day"
+      "Sepp Straka",
+      "Akshay Bhatia"
+    ],
+    "Lehman": [
+      "Matt Fitzpatrick",
+      "Ludvig Åberg",
+      "Russell Henley",
+      "Sam Burns",
+      "Hideki Matsuyama",
+      "Harris English"
+    ],
+    "Swift": [
+      "Bryce Fisher",
+      "Mark Geddes",
+      "Jesse Droemer",
+      "Michael Kartrude",
+      "Ryan Vermeer",
+      "Derek Berg"
     ]
   }
 }
