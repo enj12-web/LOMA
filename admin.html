@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOMA Admin — Draft Picks</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a2028;
+    --border: #2a3441;
+    --text: #e8eef5;
+    --muted: #7d8b9c;
+    --green: #4ade80;
+    --red: #f87171;
+    --gold: #fbbf24;
+    --blue: #60a5fa;
+    --active: #1e3a5f;
+    --disabled: #2a3441;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 16px;
+    line-height: 1.4;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px; }
+  h1 { margin: 0 0 6px; font-size: 20px; }
+  .subtitle { color: var(--muted); font-size: 13px; }
+  .nav-link { color: var(--blue); text-decoration: none; font-size: 13px; }
+  .nav-link:hover { text-decoration: underline; }
+
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; }
+  h2 { margin: 0 0 10px; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .pool-config { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  input[type="text"], select {
+    width: 100%; padding: 6px 8px; background: var(--bg); color: var(--text);
+    border: 1px solid var(--border); border-radius: 4px; font-size: 14px;
+    font-family: inherit;
+  }
+
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+  }
+  .team-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .team-card:hover { border-color: var(--blue); }
+  .team-card.active { background: var(--active); border-color: var(--blue); }
+  .team-card.complete { border-color: var(--green); }
+  .team-card.over { border-color: var(--red); }
+  .team-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 4px;
+  }
+  .team-name-input {
+    background: transparent; border: none; color: var(--text);
+    font-weight: 600; font-size: 13px; flex: 1; padding: 2px 0;
+    font-family: inherit;
+  }
+  .team-name-input:focus { outline: 1px solid var(--blue); padding-left: 2px; }
+  .team-count {
+    font-size: 11px; color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .team-count.complete { color: var(--green); }
+  .team-count.over { color: var(--red); }
+  .team-roster { font-size: 11px; color: var(--muted); }
+  .team-roster .player { display: block; padding: 1px 0; }
+  .team-roster .player .remove {
+    cursor: pointer; color: var(--red); margin-left: 4px;
+    opacity: 0; transition: opacity 0.15s;
+  }
+  .team-roster .player:hover .remove { opacity: 1; }
+
+  .draft-controls {
+    display: flex; gap: 12px; align-items: center;
+    margin-bottom: 10px; flex-wrap: wrap;
+  }
+  .active-team-badge {
+    background: var(--active); border: 1px solid var(--blue);
+    padding: 4px 10px; border-radius: 4px;
+    font-size: 13px;
+  }
+  .active-team-badge.complete { background: #1a3a2a; border-color: var(--green); }
+  .search-input { flex: 1; min-width: 200px; }
+
+  .players-list {
+    max-height: 500px; overflow-y: auto;
+    border: 1px solid var(--border); border-radius: 4px;
+    background: var(--bg);
+  }
+  .player-row {
+    display: grid;
+    grid-template-columns: 30px 1fr 60px 50px 100px;
+    gap: 8px; align-items: center;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .player-row:last-child { border-bottom: none; }
+  .player-row:hover { background: #1e2530; }
+  .player-row.assigned-other { opacity: 0.4; cursor: not-allowed; }
+  .player-row.assigned-current { background: var(--active); }
+  .player-row input[type="checkbox"] { cursor: pointer; }
+  .player-row.assigned-other input[type="checkbox"] { cursor: not-allowed; }
+  .player-pos { color: var(--muted); font-size: 11px; }
+  .player-score { font-variant-numeric: tabular-nums; text-align: right; }
+  .player-score.under { color: var(--green); }
+  .player-score.over { color: var(--red); }
+  .player-cut { color: var(--muted); font-size: 10px; }
+  .player-assigned-to { color: var(--blue); font-size: 11px; text-align: right; }
+
+  .status-bar {
+    padding: 8px 12px; background: var(--bg); border: 1px solid var(--border);
+    border-radius: 4px; font-size: 13px; margin-bottom: 10px;
+  }
+  .status-bar.ok { border-color: var(--green); }
+  .status-bar.warn { border-color: var(--gold); color: var(--gold); }
+  .status-bar.err  { border-color: var(--red); color: var(--red); }
+
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  button {
+    background: var(--blue); color: #0a0f14;
+    border: none; padding: 8px 14px; border-radius: 4px;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    font-family: inherit;
+  }
+  button:hover { opacity: 0.9; }
+  button.secondary { background: var(--border); color: var(--text); }
+  button.danger { background: var(--red); color: #0a0f14; }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .json-preview {
+    background: #0a0f14; border: 1px solid var(--border); border-radius: 4px;
+    padding: 10px; margin-top: 10px;
+    font-family: 'SF Mono', Monaco, 'Cascadia Mono', monospace;
+    font-size: 12px; max-height: 300px; overflow: auto;
+    white-space: pre; color: #d4d4d4;
+  }
+  .hidden { display: none; }
+  .help { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .help code { background: var(--bg); padding: 1px 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>LOMA Admin — Draft Picks</h1>
+  <div class="subtitle">
+    Assign players to teams, then copy the generated JSON to <code>picks.json</code> on GitHub.
+    · <a class="nav-link" href="index.html">← back to dashboard</a>
+  </div>
+</header>
+
+<section>
+  <h2>Pool Config</h2>
+  <div class="pool-config">
+    <div>
+      <label>Pool name</label>
+      <input type="text" id="pool-name" placeholder="Major Championship Pool 2026">
+    </div>
+    <div>
+      <label>Active event name (must match ESPN exactly)</label>
+      <input type="text" id="active-event" placeholder="PGA Championship">
+    </div>
+  </div>
+  <div class="help">
+    Use the exact ESPN event name: <code>Masters Tournament</code>, <code>PGA Championship</code>, <code>U.S. Open Championship</code>, or <code>The Open Championship</code>.
+  </div>
+</section>
+
+<section>
+  <h2>Teams <span style="color:var(--muted);text-transform:none;letter-spacing:normal;font-size:12px;">— click a team to draft for it</span></h2>
+  <div class="teams-grid" id="teams-grid"></div>
+  <div style="margin-top:8px;">
+    <button class="secondary" id="add-team-btn">+ Add team</button>
+    <button class="secondary" id="reset-btn">Reset to picks.json on GitHub</button>
+    <button class="secondary" id="clear-btn">Clear all assignments</button>
+  </div>
+</section>
+
+<section>
+  <h2>Players</h2>
+  <div class="draft-controls">
+    <div class="active-team-badge" id="active-team-badge">No team selected</div>
+    <input type="text" class="search-input" id="search" placeholder="Search player name…">
+    <select id="sort">
+      <option value="position">Sort: Position</option>
+      <option value="name">Sort: Name</option>
+      <option value="score">Sort: Score</option>
+    </select>
+    <label style="margin:0;display:flex;align-items:center;gap:4px;color:var(--text);font-size:12px;">
+      <input type="checkbox" id="hide-cut"> Hide cut players
+    </label>
+  </div>
+  <div class="players-list" id="players-list">
+    <div style="padding:20px;text-align:center;color:var(--muted);">Loading ESPN field…</div>
+  </div>
+</section>
+
+<section>
+  <h2>Output</h2>
+  <div class="status-bar" id="status">Draft in progress…</div>
+  <div class="actions">
+    <button id="generate-btn">Generate picks.json</button>
+    <button class="secondary" id="copy-btn" disabled>Copy to clipboard</button>
+    <button class="secondary" id="open-github-btn">Open picks.json on GitHub →</button>
+  </div>
+  <div class="json-preview hidden" id="json-preview"></div>
+  <div class="help">
+    Once the JSON below validates: click <strong>Copy to clipboard</strong>, then <strong>Open picks.json on GitHub</strong>, paste over the entire file content, and commit. The cron picks it up within ~5 minutes.
+  </div>
+</section>
+
+</div>
+
+<script>
+const LS_KEY = 'loma_draft_state_v1';
+const GH_REPO = 'enj12-web/LOMA';
+const PICKS_JSON_URL = 'picks.json?t=' + Date.now();
+const ESPN_URL = 'https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard';
+
+let players = [];           // {id, name, key, score, position, made_cut}
+let teams = [];             // [{name, playerIds: []}]
+let activeTeamIdx = null;
+let poolName = 'Major Championship Pool 2026';
+let activeEvent = 'PGA Championship';
+let tournamentRounds = 4;
+
+function normalize(s) {
+  return s.normalize('NFKD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[.'`"]/g, '').replace(/[-_/]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function parseScore(s) {
+  if (s === null || s === undefined) return null;
+  s = String(s).trim();
+  if (s === 'E' || s === '0' || s === '') return 0;
+  return parseInt(s.replace('+', ''), 10);
+}
+
+async function loadPlayers() {
+  try {
+    const resp = await fetch(ESPN_URL);
+    const data = await resp.json();
+    const ev = (data.events || [])[0];
+    if (!ev) {
+      document.getElementById('players-list').innerHTML =
+        '<div style="padding:20px;text-align:center;color:var(--gold);">No active PGA event in ESPN scoreboard. Player list available only during tournament weeks.</div>';
+      return;
+    }
+    const comp = ev.competitions[0];
+    players = comp.competitors.map(c => {
+      const linescores = c.linescores || [];
+      return {
+        id: c.id,
+        name: c.athlete.displayName,
+        key: normalize(c.athlete.displayName),
+        score: parseScore(c.score),
+        position: c.order || 999,
+        made_cut: linescores.length >= tournamentRounds
+      };
+    });
+    // If activeEvent input is empty, default to current event
+    if (!document.getElementById('active-event').value) {
+      document.getElementById('active-event').value = ev.name;
+      activeEvent = ev.name;
+    }
+    renderPlayers();
+  } catch (e) {
+    document.getElementById('players-list').innerHTML =
+      '<div style="padding:20px;text-align:center;color:var(--red);">Failed to load ESPN field: ' + e.message + '</div>';
+  }
+}
+
+async function loadCurrentPicks() {
+  try {
+    const resp = await fetch(PICKS_JSON_URL);
+    const data = await resp.json();
+    poolName = data.pool_name || poolName;
+    activeEvent = data.active_event_name || activeEvent;
+    tournamentRounds = data.tournament_rounds || 4;
+    document.getElementById('pool-name').value = poolName;
+    document.getElementById('active-event').value = activeEvent;
+    // Convert names to IDs once players have loaded
+    teams = Object.entries(data.teams || {}).map(([name, playerNames]) => ({
+      name,
+      pendingNames: playerNames,
+      playerIds: []
+    }));
+    return true;
+  } catch (e) {
+    console.warn('Could not load picks.json:', e);
+    return false;
+  }
+}
+
+function resolvePendingNames() {
+  // Once players are loaded, match pendingNames to IDs
+  teams.forEach(t => {
+    if (!t.pendingNames) return;
+    t.playerIds = [];
+    t.unmatchedNames = [];
+    t.pendingNames.forEach(pname => {
+      const key = normalize(pname);
+      const p = players.find(pl => pl.key === key);
+      if (p) t.playerIds.push(p.id);
+      else t.unmatchedNames.push(pname);
+    });
+    delete t.pendingNames;
+  });
+}
+
+function loadFromLocalStorage() {
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if (!raw) return false;
+    const state = JSON.parse(raw);
+    poolName = state.poolName || poolName;
+    activeEvent = state.activeEvent || activeEvent;
+    teams = state.teams || teams;
+    document.getElementById('pool-name').value = poolName;
+    document.getElementById('active-event').value = activeEvent;
+    return true;
+  } catch (e) { return false; }
+}
+
+function saveToLocalStorage() {
+  poolName = document.getElementById('pool-name').value;
+  activeEvent = document.getElementById('active-event').value;
+  const state = { poolName, activeEvent, teams: teams.map(t => ({ name: t.name, playerIds: t.playerIds })) };
+  localStorage.setItem(LS_KEY, JSON.stringify(state));
+}
+
+function playerAssignedTo(playerId) {
+  for (let i = 0; i < teams.length; i++) {
+    if (teams[i].playerIds.includes(playerId)) return i;
+  }
+  return -1;
+}
+
+function togglePlayer(playerId) {
+  if (activeTeamIdx === null) {
+    alert('Pick a team first (click a team card above).');
+    return;
+  }
+  const currentlyAssignedTo = playerAssignedTo(playerId);
+  if (currentlyAssignedTo === activeTeamIdx) {
+    // Remove from current team
+    teams[activeTeamIdx].playerIds = teams[activeTeamIdx].playerIds.filter(id => id !== playerId);
+  } else if (currentlyAssignedTo === -1) {
+    // Add to current team
+    teams[activeTeamIdx].playerIds.push(playerId);
+  } else {
+    // Already on another team — do nothing (the row should be visually disabled)
+    return;
+  }
+  saveToLocalStorage();
+  renderAll();
+}
+
+function removeFromTeam(teamIdx, playerId, evt) {
+  if (evt) evt.stopPropagation();
+  teams[teamIdx].playerIds = teams[teamIdx].playerIds.filter(id => id !== playerId);
+  saveToLocalStorage();
+  renderAll();
+}
+
+function selectTeam(idx) {
+  activeTeamIdx = idx;
+  renderAll();
+}
+
+function addTeam() {
+  teams.push({ name: 'Team ' + String.fromCharCode(65 + teams.length), playerIds: [] });
+  saveToLocalStorage();
+  renderAll();
+}
+
+function renameTeam(idx, newName) {
+  teams[idx].name = newName;
+  saveToLocalStorage();
+  renderTeams();
+  renderActiveTeamBadge();
+}
+
+function clearAll() {
+  if (!confirm('Clear all team assignments? Team names are kept.')) return;
+  teams.forEach(t => t.playerIds = []);
+  saveToLocalStorage();
+  renderAll();
+}
+
+async function resetFromGithub() {
+  if (!confirm('Discard local changes and reload from picks.json on GitHub?')) return;
+  localStorage.removeItem(LS_KEY);
+  teams = [];
+  await loadCurrentPicks();
+  resolvePendingNames();
+  renderAll();
+}
+
+function renderTeams() {
+  const grid = document.getElementById('teams-grid');
+  grid.innerHTML = '';
+  teams.forEach((team, idx) => {
+    const count = team.playerIds.length;
+    const card = document.createElement('div');
+    let cls = 'team-card';
+    if (idx === activeTeamIdx) cls += ' active';
+    if (count === 6) cls += ' complete';
+    else if (count > 6) cls += ' over';
+    card.className = cls;
+    card.onclick = () => selectTeam(idx);
+
+    const header = document.createElement('div');
+    header.className = 'team-header';
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.className = 'team-name-input';
+    nameInput.value = team.name;
+    nameInput.onclick = (e) => e.stopPropagation();
+    nameInput.oninput = (e) => renameTeam(idx, e.target.value);
+    header.appendChild(nameInput);
+
+    const countSpan = document.createElement('span');
+    countSpan.className = 'team-count' + (count === 6 ? ' complete' : count > 6 ? ' over' : '');
+    countSpan.textContent = count + '/6';
+    header.appendChild(countSpan);
+    card.appendChild(header);
+
+    const roster = document.createElement('div');
+    roster.className = 'team-roster';
+    team.playerIds.forEach(pid => {
+      const p = players.find(pl => pl.id === pid);
+      const row = document.createElement('span');
+      row.className = 'player';
+      row.textContent = p ? p.name : '(unknown id ' + pid + ')';
+      const x = document.createElement('span');
+      x.className = 'remove';
+      x.textContent = '✕';
+      x.onclick = (e) => removeFromTeam(idx, pid, e);
+      row.appendChild(x);
+      roster.appendChild(row);
+    });
+    if (team.unmatchedNames && team.unmatchedNames.length) {
+      team.unmatchedNames.forEach(name => {
+        const row = document.createElement('span');
+        row.className = 'player';
+        row.style.color = 'var(--gold)';
+        row.textContent = name + ' ⚠ not in field';
+        roster.appendChild(row);
+      });
+    }
+    card.appendChild(roster);
+    grid.appendChild(card);
+  });
+}
+
+function renderActiveTeamBadge() {
+  const badge = document.getElementById('active-team-badge');
+  if (activeTeamIdx === null) {
+    badge.textContent = 'No team selected — click a team above';
+    badge.className = 'active-team-badge';
+    return;
+  }
+  const t = teams[activeTeamIdx];
+  const c = t.playerIds.length;
+  const remaining = 6 - c;
+  let label = `Drafting for: ${t.name}`;
+  if (c < 6) label += ` — need ${remaining} more`;
+  else if (c === 6) label += ` — complete ✓`;
+  else label += ` — over by ${c - 6}`;
+  badge.textContent = label;
+  badge.className = 'active-team-badge' + (c === 6 ? ' complete' : '');
+}
+
+function renderPlayers() {
+  const list = document.getElementById('players-list');
+  const search = normalize(document.getElementById('search').value);
+  const sortBy = document.getElementById('sort').value;
+  const hideCut = document.getElementById('hide-cut').checked;
+
+  let filtered = players.filter(p => {
+    if (search && !p.key.includes(search)) return false;
+    if (hideCut && !p.made_cut) return false;
+    return true;
+  });
+
+  if (sortBy === 'name') filtered.sort((a, b) => a.name.localeCompare(b.name));
+  else if (sortBy === 'score') filtered.sort((a, b) => (a.score ?? 99) - (b.score ?? 99));
+  else filtered.sort((a, b) => a.position - b.position);
+
+  if (!filtered.length) {
+    list.innerHTML = '<div style="padding:20px;text-align:center;color:var(--muted);">No matching players.</div>';
+    return;
+  }
+
+  const frag = document.createDocumentFragment();
+  filtered.forEach(p => {
+    const assignedTo = playerAssignedTo(p.id);
+    const row = document.createElement('div');
+    let cls = 'player-row';
+    if (assignedTo === activeTeamIdx && activeTeamIdx !== null) cls += ' assigned-current';
+    else if (assignedTo !== -1) cls += ' assigned-other';
+    row.className = cls;
+    row.onclick = () => togglePlayer(p.id);
+
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = assignedTo === activeTeamIdx && activeTeamIdx !== null;
+    cb.onclick = (e) => { e.stopPropagation(); togglePlayer(p.id); };
+    row.appendChild(cb);
+
+    const name = document.createElement('div');
+    name.textContent = p.name;
+    row.appendChild(name);
+
+    const score = document.createElement('div');
+    score.className = 'player-score' + (p.score < 0 ? ' under' : p.score > 0 ? ' over' : '');
+    score.textContent = p.score === null ? '—' : (p.score === 0 ? 'E' : (p.score > 0 ? '+' + p.score : p.score));
+    row.appendChild(score);
+
+    const posDiv = document.createElement('div');
+    posDiv.className = 'player-pos';
+    posDiv.textContent = p.made_cut ? '#' + p.position : 'CUT';
+    if (!p.made_cut) posDiv.className += ' player-cut';
+    row.appendChild(posDiv);
+
+    const assigned = document.createElement('div');
+    assigned.className = 'player-assigned-to';
+    if (assignedTo !== -1) assigned.textContent = teams[assignedTo].name;
+    row.appendChild(assigned);
+    frag.appendChild(row);
+  });
+  list.innerHTML = '';
+  list.appendChild(frag);
+}
+
+function validate() {
+  const issues = [];
+  teams.forEach((t, i) => {
+    if (!t.name.trim()) issues.push(`Team ${i + 1} has no name`);
+    if (t.playerIds.length !== 6) issues.push(`${t.name || 'Team ' + (i + 1)}: ${t.playerIds.length}/6 picks`);
+  });
+  const seen = new Set();
+  teams.forEach(t => t.playerIds.forEach(id => {
+    if (seen.has(id)) issues.push(`Duplicate pick: ${players.find(p => p.id === id)?.name || id}`);
+    seen.add(id);
+  }));
+  const names = new Set();
+  teams.forEach((t, i) => {
+    if (names.has(t.name)) issues.push(`Duplicate team name: ${t.name}`);
+    names.add(t.name);
+  });
+  return issues;
+}
+
+function renderStatus() {
+  const issues = validate();
+  const bar = document.getElementById('status');
+  if (issues.length === 0 && teams.length > 0) {
+    bar.className = 'status-bar ok';
+    bar.textContent = `✓ ${teams.length} teams complete (${teams.length * 6} picks). Ready to generate.`;
+  } else if (teams.length === 0) {
+    bar.className = 'status-bar warn';
+    bar.textContent = 'No teams yet — add one to start drafting.';
+  } else {
+    bar.className = 'status-bar warn';
+    bar.textContent = 'Not ready: ' + issues.join(' · ');
+  }
+}
+
+function buildPicksJson() {
+  const out = {
+    pool_name: document.getElementById('pool-name').value || 'Major Pool',
+    active_event_name: document.getElementById('active-event').value || 'PGA Championship',
+    tournament_rounds: tournamentRounds,
+    teams: {}
+  };
+  teams.forEach(t => {
+    out.teams[t.name] = t.playerIds.map(id => {
+      const p = players.find(pl => pl.id === id);
+      return p ? p.name : '(unknown)';
+    });
+  });
+  return JSON.stringify(out, null, 2) + '\n';
+}
+
+function generateJson() {
+  const issues = validate();
+  const preview = document.getElementById('json-preview');
+  preview.classList.remove('hidden');
+  if (issues.length > 0) {
+    preview.textContent = '⚠ Fix these issues first:\n  • ' + issues.join('\n  • ');
+    document.getElementById('copy-btn').disabled = true;
+  } else {
+    preview.textContent = buildPicksJson();
+    document.getElementById('copy-btn').disabled = false;
+  }
+}
+
+async function copyJson() {
+  try {
+    await navigator.clipboard.writeText(buildPicksJson());
+    const btn = document.getElementById('copy-btn');
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = orig, 1500);
+  } catch (e) {
+    alert('Copy failed. Select the JSON text above and copy manually.');
+  }
+}
+
+function openGithub() {
+  window.open(`https://github.com/${GH_REPO}/edit/main/picks.json`, '_blank');
+}
+
+function renderAll() {
+  renderTeams();
+  renderActiveTeamBadge();
+  renderPlayers();
+  renderStatus();
+}
+
+// --- init ---
+(async function init() {
+  document.getElementById('search').oninput = renderPlayers;
+  document.getElementById('sort').onchange = renderPlayers;
+  document.getElementById('hide-cut').onchange = renderPlayers;
+  document.getElementById('pool-name').oninput = saveToLocalStorage;
+  document.getElementById('active-event').oninput = saveToLocalStorage;
+  document.getElementById('add-team-btn').onclick = addTeam;
+  document.getElementById('clear-btn').onclick = clearAll;
+  document.getElementById('reset-btn').onclick = resetFromGithub;
+  document.getElementById('generate-btn').onclick = generateJson;
+  document.getElementById('copy-btn').onclick = copyJson;
+  document.getElementById('open-github-btn').onclick = openGithub;
+
+  // Load order: localStorage > picks.json on GitHub. ESPN players load in parallel.
+  const lsLoaded = loadFromLocalStorage();
+  if (!lsLoaded) await loadCurrentPicks();
+  await loadPlayers();
+  if (!lsLoaded) resolvePendingNames();
+  if (teams.length === 0) addTeam(); // start with one team
+  renderAll();
+})();
+</script>
+</body>
+</html>
