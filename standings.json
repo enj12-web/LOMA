@@ -5,68 +5,6 @@
   "competitor_count": 156,
   "teams": [
     {
-      "team": "Yates",
-      "total": -9,
-      "status": "active",
-      "players": [
-        {
-          "name": "Xander Schauffele",
-          "score": -3,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 8,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Jon Rahm",
-          "score": -4,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 4,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Viktor Hovland",
-          "score": 6,
-          "made_cut": false,
-          "rounds_played": 2,
-          "position": 101,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Jordan Spieth",
-          "score": 1,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 48,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Si Woo Kim",
-          "score": -2,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 20,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Patrick Cantlay",
-          "score": 0,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 41,
-          "counts": true,
-          "not_found": false
-        }
-      ],
-      "rank": 1
-    },
-    {
       "team": "EJ",
       "total": -8,
       "status": "active",
@@ -94,7 +32,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 13,
+          "position": 15,
           "counts": true,
           "not_found": false
         },
@@ -103,7 +41,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 32,
+          "position": 30,
           "counts": true,
           "not_found": false
         },
@@ -121,7 +59,69 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 69,
+          "position": 70,
+          "counts": false,
+          "not_found": false
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "team": "Yates",
+      "total": -6,
+      "status": "active",
+      "players": [
+        {
+          "name": "Xander Schauffele",
+          "score": -3,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 7,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Jon Rahm",
+          "score": -4,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 4,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Viktor Hovland",
+          "score": 6,
+          "made_cut": false,
+          "rounds_played": 2,
+          "position": 101,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Jordan Spieth",
+          "score": 1,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 43,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Si Woo Kim",
+          "score": 0,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 38,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Patrick Cantlay",
+          "score": 3,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 63,
           "counts": false,
           "not_found": false
         }
@@ -138,7 +138,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 60,
+          "position": 58,
           "counts": false,
           "not_found": false
         },
@@ -165,7 +165,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 26,
+          "position": 24,
           "counts": true,
           "not_found": false
         },
@@ -174,7 +174,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 45,
+          "position": 41,
           "counts": true,
           "not_found": false
         },
@@ -183,7 +183,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 29,
+          "position": 27,
           "counts": true,
           "not_found": false
         }
@@ -200,16 +200,16 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 7,
+          "position": 6,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Patrick Reed",
-          "score": -2,
+          "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 19,
+          "position": 8,
           "counts": true,
           "not_found": false
         },
@@ -233,10 +233,10 @@
         },
         {
           "name": "Min Woo Lee",
-          "score": -1,
+          "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 31,
+          "position": 40,
           "counts": true,
           "not_found": false
         },
@@ -271,7 +271,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 28,
+          "position": 26,
           "counts": true,
           "not_found": false
         },
@@ -280,7 +280,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 27,
+          "position": 25,
           "counts": true,
           "not_found": false
         },
@@ -321,10 +321,10 @@
       "players": [
         {
           "name": "Cameron Young",
-          "score": 0,
+          "score": 1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 43,
+          "position": 46,
           "counts": true,
           "not_found": false
         },
@@ -339,10 +339,10 @@
         },
         {
           "name": "Justin Thomas",
-          "score": 0,
+          "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 44,
+          "position": 28,
           "counts": true,
           "not_found": false
         },
@@ -351,7 +351,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 63,
+          "position": 61,
           "counts": true,
           "not_found": false
         },
@@ -440,5 +440,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-05-16T20:24:15Z"
+  "updated_at": "2026-05-16T21:07:52Z"
 }
