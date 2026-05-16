@@ -5,25 +5,87 @@
   "competitor_count": 156,
   "teams": [
     {
+      "team": "Lehman",
+      "total": -7,
+      "status": "active",
+      "players": [
+        {
+          "name": "Matt Fitzpatrick",
+          "score": 3,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 58,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Ludvig \u00c5berg",
+          "score": -4,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 5,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Russell Henley",
+          "score": 5,
+          "made_cut": false,
+          "rounds_played": 2,
+          "position": 86,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Sam Burns",
+          "score": -1,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 23,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Hideki Matsuyama",
+          "score": -1,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 32,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Harris English",
+          "score": -1,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 26,
+          "counts": true,
+          "not_found": false
+        }
+      ],
+      "rank": 1
+    },
+    {
       "team": "EJ",
-      "total": -8,
+      "total": -6,
       "status": "active",
       "players": [
         {
           "name": "Scottie Scheffler",
-          "score": -2,
+          "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 21,
+          "position": 28,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Chris Gotterup",
-          "score": -4,
+          "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 5,
+          "position": 12,
           "counts": true,
           "not_found": false
         },
@@ -41,7 +103,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 30,
+          "position": 33,
           "counts": true,
           "not_found": false
         },
@@ -59,12 +121,12 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 70,
+          "position": 68,
           "counts": false,
           "not_found": false
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "team": "Yates",
@@ -76,7 +138,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 7,
+          "position": 9,
           "counts": true,
           "not_found": false
         },
@@ -112,7 +174,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 38,
+          "position": 41,
           "counts": true,
           "not_found": false
         },
@@ -123,68 +185,6 @@
           "rounds_played": 3,
           "position": 63,
           "counts": false,
-          "not_found": false
-        }
-      ],
-      "rank": 2
-    },
-    {
-      "team": "Lehman",
-      "total": -5,
-      "status": "active",
-      "players": [
-        {
-          "name": "Matt Fitzpatrick",
-          "score": 3,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 58,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Ludvig \u00c5berg",
-          "score": -3,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 9,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Russell Henley",
-          "score": 5,
-          "made_cut": false,
-          "rounds_played": 2,
-          "position": 86,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Sam Burns",
-          "score": -1,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 24,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Hideki Matsuyama",
-          "score": 0,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 41,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Harris English",
-          "score": -1,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 27,
-          "counts": true,
           "not_found": false
         }
       ],
@@ -200,7 +200,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 6,
+          "position": 8,
           "counts": true,
           "not_found": false
         },
@@ -209,7 +209,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 8,
+          "position": 10,
           "counts": true,
           "not_found": false
         },
@@ -233,10 +233,10 @@
         },
         {
           "name": "Min Woo Lee",
-          "score": 0,
+          "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 40,
+          "position": 31,
           "counts": true,
           "not_found": false
         },
@@ -271,7 +271,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 26,
+          "position": 25,
           "counts": true,
           "not_found": false
         },
@@ -280,7 +280,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 25,
+          "position": 24,
           "counts": true,
           "not_found": false
         },
@@ -321,10 +321,10 @@
       "players": [
         {
           "name": "Cameron Young",
-          "score": 1,
+          "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 46,
+          "position": 29,
           "counts": true,
           "not_found": false
         },
@@ -342,7 +342,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 28,
+          "position": 30,
           "counts": true,
           "not_found": false
         },
@@ -440,5 +440,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-05-16T21:07:52Z"
+  "updated_at": "2026-05-16T22:00:57Z"
 }
