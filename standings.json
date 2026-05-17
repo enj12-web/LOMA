@@ -14,7 +14,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 57,
+          "position": 59,
           "counts": false,
           "not_found": false
         },
@@ -121,7 +121,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 63,
+          "position": 65,
           "counts": false,
           "not_found": false
         }
@@ -173,7 +173,7 @@
           "name": "Collin Morikawa",
           "score": 5,
           "made_cut": true,
-          "rounds_played": 3,
+          "rounds_played": 4,
           "position": 77,
           "counts": false,
           "not_found": false
@@ -183,7 +183,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 65,
+          "position": 70,
           "counts": false,
           "not_found": false
         }
@@ -351,7 +351,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 60,
+          "position": 62,
           "counts": true,
           "not_found": false
         },
@@ -440,5 +440,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-05-17T11:44:22Z"
+  "updated_at": "2026-05-17T12:39:57Z"
 }
