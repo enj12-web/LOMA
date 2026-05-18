@@ -1,7 +1,7 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "PGA Championship",
-  "event_status": "Round 4 - Play Complete",
+  "event_status": "Final",
   "competitor_count": 156,
   "teams": [
     {
@@ -440,5 +440,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-05-17T23:05:28Z"
+  "updated_at": "2026-05-18T00:04:49Z"
 }
