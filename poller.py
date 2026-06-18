@@ -59,16 +59,26 @@ def parse_leaderboard(event, tournament_rounds):
     competition = event["competitions"][0]
     status_state = competition.get("status", {}).get("type", {}).get("state", "")
     status_detail = competition.get("status", {}).get("type", {}).get("detail", "")
+    # Current round number (1-4). The 36-hole cut is applied AFTER round 2, so the
+    # cut only exists once we're in round 3+. Before that, everyone in the field is
+    # still alive. ESPN exposes no per-player cut flag on this endpoint, so we infer
+    # cut status from linescore count — but that signal is only valid post-cut.
+    current_round = competition.get("status", {}).get("period") or 1
+    cut_applied = current_round >= 3
     players_by_name = {}
     for c in competition.get("competitors", []):
         name = c.get("athlete", {}).get("displayName", "")
         if not name:
             continue
         linescores = c.get("linescores", []) or []
-        # Cut detection: player has fewer linescores than tournament rounds
-        # (ESPN populates placeholder linescores for upcoming rounds for active players)
-        made_cut = len(linescores) >= tournament_rounds
         score = parse_score(c.get("score"))
+        if cut_applied:
+            # Post-cut: missed-cut players stop getting placeholder linescores, so
+            # made-cut players have entries for all tournament_rounds, cut players don't.
+            made_cut = len(linescores) >= tournament_rounds
+        else:
+            # Rounds 1-2: no cut yet — anyone with a score is still in.
+            made_cut = score is not None
         # Count rounds played (non-zero/non-null values)
         rounds_played = sum(
             1 for ls in linescores
