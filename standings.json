@@ -1,59 +1,8 @@
 {
   "pool_name": "Major Championship Pool 2026",
-  "event_name": "U.S. Open",
-  "event_status": "Thu, June 17th at 12:00 AM EDT",
-  "competitor_count": 156,
-  "teams": [
-    {
-      "team": "EJ",
-      "total": null,
-      "status": "DQ",
-      "players": [],
-      "rank": null
-    },
-    {
-      "team": "RJ",
-      "total": null,
-      "status": "DQ",
-      "players": [],
-      "rank": null
-    },
-    {
-      "team": "Yates",
-      "total": null,
-      "status": "DQ",
-      "players": [],
-      "rank": null
-    },
-    {
-      "team": "Stude",
-      "total": null,
-      "status": "DQ",
-      "players": [],
-      "rank": null
-    },
-    {
-      "team": "MJ",
-      "total": null,
-      "status": "DQ",
-      "players": [],
-      "rank": null
-    },
-    {
-      "team": "Lehman",
-      "total": null,
-      "status": "DQ",
-      "players": [],
-      "rank": null
-    },
-    {
-      "team": "Swift",
-      "total": null,
-      "status": "DQ",
-      "players": [],
-      "rank": null
-    }
-  ],
+  "event_name": "PGA Championship",
+  "event_status": "Waiting for PGA Championship \u2014 current PGA event: U.S. Open",
+  "teams": [],
   "not_found_players": [],
-  "updated_at": "2026-06-18T04:36:51Z"
+  "updated_at": "2026-06-18T04:54:09Z"
 }
