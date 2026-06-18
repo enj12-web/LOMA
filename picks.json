@@ -3,61 +3,12 @@
   "active_event_name": "U.S. Open",
   "tournament_rounds": 4,
   "teams": {
-    "EJ": [
-      "Scottie Scheffler",
-      "Chris Gotterup",
-      "Justin Rose",
-      "Nicolai Højgaard",
-      "Collin Morikawa",
-      "Shane Lowry"
-    ],
-    "RJ": [
-      "Rory McIlroy",
-      "Patrick Reed",
-      "Tyrrell Hatton",
-      "Adam Scott",
-      "Min Woo Lee",
-      "Robert MacIntyre"
-    ],
-    "Yates": [
-      "Xander Schauffele",
-      "Jon Rahm",
-      "Viktor Hovland",
-      "Jordan Spieth",
-      "Si Woo Kim",
-      "Patrick Cantlay"
-    ],
-    "Stude": [
-      "Bryson DeChambeau",
-      "Brooks Koepka",
-      "Rickie Fowler",
-      "J.J. Spaun",
-      "Keegan Bradley",
-      "Gary Woodland"
-    ],
-    "MJ": [
-      "Cameron Young",
-      "Tommy Fleetwood",
-      "Justin Thomas",
-      "Corey Conners",
-      "Sepp Straka",
-      "Akshay Bhatia"
-    ],
-    "Lehman": [
-      "Matt Fitzpatrick",
-      "Ludvig Åberg",
-      "Russell Henley",
-      "Sam Burns",
-      "Hideki Matsuyama",
-      "Harris English"
-    ],
-    "Swift": [
-      "Bryce Fisher",
-      "Mark Geddes",
-      "Jesse Droemer",
-      "Michael Kartrude",
-      "Ryan Vermeer",
-      "Derek Berg"
-    ]
+    "EJ": [],
+    "RJ": [],
+    "Yates": [],
+    "Stude": [],
+    "MJ": [],
+    "Lehman": [],
+    "Swift": []
   }
 }
