@@ -1,14 +1,63 @@
 {
   "pool_name": "Major Championship Pool 2026",
-  "active_event_name": "U.S. Open",
+  "active_event_name": "PGA Championship",
   "tournament_rounds": 4,
   "teams": {
-    "EJ": [],
-    "RJ": [],
-    "Yates": [],
-    "Stude": [],
-    "MJ": [],
-    "Lehman": [],
-    "Swift": []
+    "EJ": [
+      "Rory McIlroy",
+      "Bryson DeChambeau",
+      "Brooks Koepka",
+      "Ben Griffin",
+      "Jordan Spieth",
+      "Adam Scott"
+    ],
+    "RJ": [
+      "Tommy Fleetwood",
+      "Patrick Cantlay",
+      "Russell Henley",
+      "Si Woo Kim",
+      "Brian Harman",
+      "Rickie Fowler"
+    ],
+    "Yates": [
+      "Scottie Scheffler",
+      "Sam Burns",
+      "Wyndham Clark",
+      "Akshay Bhatia",
+      "Harris English",
+      "Robert MacIntyre"
+    ],
+    "Stude": [
+      "Viktor Hovland",
+      "Tyrrell Hatton",
+      "Joaquín Niemann",
+      "Matt Fitzpatrick",
+      "Chris Gotterup",
+      "Aaron Rai"
+    ],
+    "MJ": [
+      "Collin Morikawa",
+      "Cameron Young",
+      "J.J. Spaun",
+      "Keegan Bradley",
+      "Jason Day",
+      "Ryan Fox"
+    ],
+    "Lehman": [
+      "Xander Schauffele",
+      "Ludvig Åberg",
+      "Hideki Matsuyama",
+      "Kristoffer Reitan",
+      "Patrick Reed",
+      "Cameron Smith"
+    ],
+    "Swift": [
+      "Shane Lowry",
+      "Jon Rahm",
+      "Justin Thomas",
+      "Maverick McNealy",
+      "Justin Rose",
+      "Kurt Kitayama"
+    ]
   }
 }
