@@ -1,6 +1,6 @@
 {
   "pool_name": "Major Championship Pool 2026",
-  "active_event_name": "PGA Championship",
+  "active_event_name": "U.S. Open Championship",
   "tournament_rounds": 4,
   "teams": {
     "EJ": [
@@ -61,3 +61,4 @@
     ]
   }
 }
+
