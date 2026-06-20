@@ -8,7 +8,7 @@
   "teams": [
     {
       "team": "Yates",
-      "total": -7,
+      "total": -5,
       "status": "active",
       "players": [
         {
@@ -16,22 +16,22 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 4,
+          "position": 3,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Sam Burns",
-          "score": -1,
+          "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 5,
+          "position": 8,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Wyndham Clark",
-          "score": -7,
+          "score": -6,
           "made_cut": true,
           "rounds_played": 3,
           "position": 1,
@@ -43,7 +43,7 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 19,
+          "position": 16,
           "counts": true,
           "not_found": false
         },
@@ -70,7 +70,7 @@
     },
     {
       "team": "Stude",
-      "total": 11,
+      "total": 12,
       "status": "active",
       "players": [
         {
@@ -87,7 +87,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 34,
+          "position": 30,
           "counts": true,
           "not_found": false
         },
@@ -96,7 +96,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 40,
+          "position": 39,
           "counts": true,
           "not_found": false
         },
@@ -105,7 +105,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 11,
+          "position": 10,
           "counts": true,
           "not_found": false
         },
@@ -120,10 +120,10 @@
         },
         {
           "name": "Aaron Rai",
-          "score": 2,
+          "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 18,
+          "position": 22,
           "counts": true,
           "not_found": false
         }
@@ -140,7 +140,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 10,
+          "position": 9,
           "counts": true,
           "not_found": false
         },
@@ -149,7 +149,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 41,
+          "position": 40,
           "counts": true,
           "not_found": false
         },
@@ -167,7 +167,7 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 17,
+          "position": 13,
           "counts": true,
           "not_found": false
         },
@@ -194,7 +194,7 @@
     },
     {
       "team": "Swift",
-      "total": 15,
+      "total": 19,
       "status": "active",
       "players": [
         {
@@ -217,10 +217,10 @@
         },
         {
           "name": "Justin Thomas",
-          "score": 0,
+          "score": 4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 9,
+          "position": 37,
           "counts": true,
           "not_found": false
         },
@@ -229,7 +229,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 30,
+          "position": 24,
           "counts": true,
           "not_found": false
         },
@@ -238,7 +238,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 36,
+          "position": 32,
           "counts": true,
           "not_found": false
         },
@@ -261,10 +261,10 @@
       "players": [
         {
           "name": "Rory McIlroy",
-          "score": 1,
+          "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 14,
+          "position": 26,
           "counts": true,
           "not_found": false
         },
@@ -291,7 +291,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 35,
+          "position": 31,
           "counts": true,
           "not_found": false
         },
@@ -300,7 +300,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 44,
+          "position": 43,
           "counts": true,
           "not_found": false
         },
@@ -326,7 +326,7 @@
           "score": 1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 12,
+          "position": 11,
           "counts": true,
           "not_found": false
         },
@@ -362,7 +362,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 29,
+          "position": 25,
           "counts": true,
           "not_found": false
         },
@@ -385,10 +385,10 @@
       "players": [
         {
           "name": "Xander Schauffele",
-          "score": -2,
+          "score": 1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 3,
+          "position": 12,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-20T21:39:27Z"
+  "updated_at": "2026-06-20T22:46:40Z"
 }
