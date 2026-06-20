@@ -41,7 +41,7 @@
           "score": 2,
           "made_cut": false,
           "rounds_played": 2,
-          "position": 38,
+          "position": 39,
           "counts": false,
           "not_found": false
         },
@@ -49,8 +49,8 @@
           "name": "Jordan Spieth",
           "score": 3,
           "made_cut": false,
-          "rounds_played": 2,
-          "position": 50,
+          "rounds_played": 3,
+          "position": 48,
           "counts": false,
           "not_found": false
         },
@@ -91,9 +91,9 @@
         },
         {
           "name": "Russell Henley",
-          "score": 3,
+          "score": 4,
           "made_cut": false,
-          "rounds_played": 2,
+          "rounds_played": 3,
           "position": 57,
           "counts": false,
           "not_found": false
@@ -180,10 +180,10 @@
         },
         {
           "name": "Robert MacIntyre",
-          "score": 6,
+          "score": 5,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 67,
+          "position": 58,
           "counts": false,
           "not_found": false
         }
@@ -208,17 +208,17 @@
           "name": "Tyrrell Hatton",
           "score": 2,
           "made_cut": false,
-          "rounds_played": 2,
-          "position": 36,
+          "rounds_played": 3,
+          "position": 35,
           "counts": false,
           "not_found": false
         },
         {
           "name": "Joaqu\u00edn Niemann",
-          "score": 3,
+          "score": 4,
           "made_cut": false,
-          "rounds_played": 2,
-          "position": 49,
+          "rounds_played": 3,
+          "position": 55,
           "counts": false,
           "not_found": false
         },
@@ -233,10 +233,10 @@
         },
         {
           "name": "Chris Gotterup",
-          "score": 6,
+          "score": 7,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 65,
+          "position": 64,
           "counts": false,
           "not_found": false
         },
@@ -271,7 +271,7 @@
           "score": 2,
           "made_cut": false,
           "rounds_played": 2,
-          "position": 39,
+          "position": 40,
           "counts": false,
           "not_found": false
         },
@@ -304,10 +304,10 @@
         },
         {
           "name": "Ryan Fox",
-          "score": 3,
+          "score": 5,
           "made_cut": false,
-          "rounds_played": 2,
-          "position": 56,
+          "rounds_played": 3,
+          "position": 63,
           "counts": false,
           "not_found": false
         }
@@ -342,7 +342,7 @@
           "score": 5,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 63,
+          "position": 60,
           "counts": false,
           "not_found": false
         },
@@ -430,8 +430,8 @@
           "name": "Kurt Kitayama",
           "score": 2,
           "made_cut": false,
-          "rounds_played": 2,
-          "position": 37,
+          "rounds_played": 3,
+          "position": 36,
           "counts": false,
           "not_found": false
         }
@@ -440,5 +440,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-20T14:32:48Z"
+  "updated_at": "2026-06-20T16:01:05Z"
 }
