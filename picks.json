@@ -2,6 +2,7 @@
   "pool_name": "Major Championship Pool 2026",
   "active_event_name": "U.S. Open",
   "tournament_rounds": 4,
+  "cut_low_n": 60,
   "teams": {
     "EJ": [
       "Rory McIlroy",

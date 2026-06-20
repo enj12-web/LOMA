@@ -55,27 +55,58 @@ def find_event(data, target_name):
     return None
 
 
-def parse_leaderboard(event, tournament_rounds):
+def thirty_six_hole_total(competitor):
+    """Sum of round 1 + round 2 to-par for a competitor, or None if either round
+    is missing (WD/DQ players never complete 36 holes). Used to determine the cut."""
+    by_period = {ls.get("period"): ls for ls in (competitor.get("linescores") or [])}
+    r1 = parse_score(by_period.get(1, {}).get("displayValue"))
+    r2 = parse_score(by_period.get(2, {}).get("displayValue"))
+    if r1 is None or r2 is None:
+        return None
+    return r1 + r2
+
+
+def compute_cut_line(competitors, cut_low_n):
+    """Cut line = the 36-hole to-par of the cut_low_n-th best player ('low N and
+    ties'). Everyone whose 36-hole total is <= this made the cut. Returns None if
+    the field is too small to have a cut."""
+    totals = sorted(
+        t for t in (thirty_six_hole_total(c) for c in competitors) if t is not None
+    )
+    if not totals:
+        return None
+    if len(totals) >= cut_low_n:
+        return totals[cut_low_n - 1]
+    return totals[-1]
+
+
+def parse_leaderboard(event, tournament_rounds, cut_low_n=60):
     competition = event["competitions"][0]
     status_state = competition.get("status", {}).get("type", {}).get("state", "")
     status_detail = competition.get("status", {}).get("type", {}).get("detail", "")
+    competitors = competition.get("competitors", [])
     # Current round number (1-4). The 36-hole cut is applied AFTER round 2, so the
     # cut only exists once we're in round 3+. Before that, everyone in the field is
-    # still alive. ESPN exposes no per-player cut flag on this endpoint, so we infer
-    # cut status from linescore count — but that signal is only valid post-cut.
+    # still alive. ESPN exposes NO per-player cut flag on this endpoint (a made-cut
+    # leader and a missed-cut player are byte-identical), so we determine the cut
+    # ourselves from 36-hole scores using the 'low N and ties' rule.
     current_round = competition.get("status", {}).get("period") or 1
     cut_applied = current_round >= 3
+    cut_line = compute_cut_line(competitors, cut_low_n) if cut_applied else None
     players_by_name = {}
-    for c in competition.get("competitors", []):
+    for c in competitors:
         name = c.get("athlete", {}).get("displayName", "")
         if not name:
             continue
         linescores = c.get("linescores", []) or []
         score = parse_score(c.get("score"))
         if cut_applied:
-            # Post-cut: missed-cut players stop getting placeholder linescores, so
-            # made-cut players have entries for all tournament_rounds, cut players don't.
-            made_cut = len(linescores) >= tournament_rounds
+            # Post-cut: made the cut iff 36-hole total is at/under the cut line.
+            # WD/DQ players (no complete 36) return None and are treated as cut.
+            t36 = thirty_six_hole_total(c)
+            made_cut = (
+                cut_line is not None and t36 is not None and t36 <= cut_line
+            )
         else:
             # Rounds 1-2: no cut yet — anyone with a score is still in.
             made_cut = score is not None
@@ -96,8 +127,10 @@ def parse_leaderboard(event, tournament_rounds):
         "event_id": event.get("id"),
         "status_state": status_state,
         "status_detail": status_detail,
+        "current_round": current_round,
+        "cut_line": cut_line,
         "players": players_by_name,
-        "competitor_count": len(competition.get("competitors", [])),
+        "competitor_count": len(competitors),
     }
 
 
@@ -164,6 +197,8 @@ def compute_standings(picks, leaderboard):
         "event_name": leaderboard["event_name"],
         "event_status": leaderboard["status_detail"] or leaderboard["status_state"],
         "competitor_count": leaderboard["competitor_count"],
+        "current_round": leaderboard.get("current_round"),
+        "cut_line": leaderboard.get("cut_line"),
         "teams": teams_out,
         "not_found_players": sorted(not_found),
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -185,6 +220,7 @@ def main():
     picks = json.loads((ROOT / "picks.json").read_text())
     target_event = picks.get("active_event_name")
     rounds = picks.get("tournament_rounds", 4)
+    cut_low_n = picks.get("cut_low_n", 60)
 
     try:
         data = fetch_scoreboard()
@@ -205,10 +241,11 @@ def main():
         (ROOT / "standings.json").write_text(json.dumps(standings, indent=2))
         return
 
-    leaderboard = parse_leaderboard(event, rounds)
+    leaderboard = parse_leaderboard(event, rounds, cut_low_n)
     standings = compute_standings(picks, leaderboard)
     (ROOT / "standings.json").write_text(json.dumps(standings, indent=2))
-    print(f"Wrote standings.json — event: {standings['event_name']}, teams: {len(standings['teams'])}")
+    print(f"Wrote standings.json — event: {standings['event_name']}, teams: {len(standings['teams'])}, "
+          f"round: {leaderboard['current_round']}, cut_line: {leaderboard['cut_line']}")
     if standings["not_found_players"]:
         print(f"WARNING — players not matched in ESPN leaderboard: {standings['not_found_players']}", file=sys.stderr)
 
