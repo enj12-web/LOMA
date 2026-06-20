@@ -1,7 +1,7 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "U.S. Open",
-  "event_status": "Round 2 - In Progress",
+  "event_status": "Round 2 - Play Complete",
   "competitor_count": 156,
   "teams": [
     {
@@ -50,7 +50,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 82,
+          "position": 83,
           "counts": false,
           "not_found": false
         },
@@ -59,7 +59,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 71,
+          "position": 72,
           "counts": false,
           "not_found": false
         }
@@ -76,7 +76,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 91,
+          "position": 92,
           "counts": false,
           "not_found": false
         },
@@ -85,7 +85,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 96,
+          "position": 97,
           "counts": false,
           "not_found": false
         },
@@ -218,7 +218,7 @@
           "score": 8,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 111,
+          "position": 110,
           "counts": false,
           "not_found": false
         },
@@ -280,7 +280,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 69,
+          "position": 70,
           "counts": true,
           "not_found": false
         },
@@ -289,7 +289,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 95,
+          "position": 96,
           "counts": false,
           "not_found": false
         },
@@ -298,7 +298,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 81,
+          "position": 82,
           "counts": true,
           "not_found": false
         },
@@ -307,7 +307,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 87,
+          "position": 88,
           "counts": false,
           "not_found": false
         }
@@ -333,7 +333,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 88,
+          "position": 89,
           "counts": false,
           "not_found": false
         },
@@ -351,7 +351,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 85,
+          "position": 86,
           "counts": false,
           "not_found": false
         },
@@ -369,7 +369,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 83,
+          "position": 84,
           "counts": true,
           "not_found": false
         }
@@ -395,7 +395,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 84,
+          "position": 85,
           "counts": true,
           "not_found": false
         },
@@ -404,7 +404,7 @@
           "score": 10,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 129,
+          "position": 131,
           "counts": false,
           "not_found": false
         },
@@ -431,7 +431,7 @@
           "score": 8,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 114,
+          "position": 113,
           "counts": false,
           "not_found": false
         }
@@ -440,5 +440,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-20T00:19:54Z"
+  "updated_at": "2026-06-20T04:43:50Z"
 }
