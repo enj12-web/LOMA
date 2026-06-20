@@ -344,7 +344,7 @@
           "score": 11,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 68,
+          "position": 67,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-20T18:59:44Z"
+  "updated_at": "2026-06-20T18:59:59Z"
 }
