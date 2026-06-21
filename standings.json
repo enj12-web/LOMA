@@ -1,7 +1,7 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "U.S. Open",
-  "event_status": "Round 4 - In Progress",
+  "event_status": "Final",
   "competitor_count": 156,
   "current_round": 4,
   "cut_line": 4,
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-21T22:02:05Z"
+  "updated_at": "2026-06-21T23:22:07Z"
 }
