@@ -1,14 +1,14 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "U.S. Open",
-  "event_status": "Round 3 - In Progress",
+  "event_status": "Round 3 - Play Complete",
   "competitor_count": 156,
   "current_round": 3,
   "cut_line": 4,
   "teams": [
     {
       "team": "Yates",
-      "total": -6,
+      "total": -5,
       "status": "active",
       "players": [
         {
@@ -31,7 +31,7 @@
         },
         {
           "name": "Wyndham Clark",
-          "score": -8,
+          "score": -7,
           "made_cut": true,
           "rounds_played": 3,
           "position": 1,
@@ -70,7 +70,7 @@
     },
     {
       "team": "Stude",
-      "total": 12,
+      "total": 13,
       "status": "active",
       "players": [
         {
@@ -102,10 +102,10 @@
         },
         {
           "name": "Matt Fitzpatrick",
-          "score": 0,
+          "score": 1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 10,
+          "position": 12,
           "counts": true,
           "not_found": false
         },
@@ -140,7 +140,7 @@
           "score": 1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 12,
+          "position": 11,
           "counts": true,
           "not_found": false
         },
@@ -326,7 +326,7 @@
           "score": 1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 11,
+          "position": 10,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-20T23:51:28Z"
+  "updated_at": "2026-06-21T02:07:04Z"
 }
