@@ -1,9 +1,9 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "U.S. Open",
-  "event_status": "Round 3 - Play Complete",
+  "event_status": "Round 4 - In Progress",
   "competitor_count": 156,
-  "current_round": 3,
+  "current_round": 4,
   "cut_line": 4,
   "teams": [
     {
@@ -341,10 +341,10 @@
         },
         {
           "name": "Russell Henley",
-          "score": 13,
+          "score": 14,
           "made_cut": true,
-          "rounds_played": 3,
-          "position": 69,
+          "rounds_played": 4,
+          "position": 70,
           "counts": true,
           "not_found": false
         },
@@ -406,7 +406,7 @@
           "score": 11,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 65,
+          "position": 66,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-21T10:37:21Z"
+  "updated_at": "2026-06-21T12:26:53Z"
 }
