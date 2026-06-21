@@ -16,7 +16,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 7,
+          "position": 6,
           "counts": true,
           "not_found": false
         },
@@ -43,7 +43,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 21,
+          "position": 20,
           "counts": true,
           "not_found": false
         },
@@ -70,7 +70,7 @@
     },
     {
       "team": "Stude",
-      "total": 7,
+      "total": 8,
       "status": "active",
       "players": [
         {
@@ -87,7 +87,7 @@
           "score": 1,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 9,
+          "position": 8,
           "counts": true,
           "not_found": false
         },
@@ -96,13 +96,13 @@
           "score": 1,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 8,
+          "position": 7,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Matt Fitzpatrick",
-          "score": 3,
+          "score": 4,
           "made_cut": true,
           "rounds_played": 4,
           "position": 22,
@@ -123,74 +123,12 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 14,
+          "position": 13,
           "counts": true,
           "not_found": false
         }
       ],
       "rank": 2
-    },
-    {
-      "team": "MJ",
-      "total": 19,
-      "status": "active",
-      "players": [
-        {
-          "name": "Collin Morikawa",
-          "score": 1,
-          "made_cut": true,
-          "rounds_played": 4,
-          "position": 12,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Cameron Young",
-          "score": 8,
-          "made_cut": true,
-          "rounds_played": 4,
-          "position": 48,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "J.J. Spaun",
-          "score": 8,
-          "made_cut": false,
-          "rounds_played": 2,
-          "position": 110,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Keegan Bradley",
-          "score": 5,
-          "made_cut": true,
-          "rounds_played": 4,
-          "position": 31,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Jason Day",
-          "score": 7,
-          "made_cut": false,
-          "rounds_played": 1,
-          "position": 156,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Ryan Fox",
-          "score": 5,
-          "made_cut": true,
-          "rounds_played": 4,
-          "position": 26,
-          "counts": true,
-          "not_found": false
-        }
-      ],
-      "rank": 3
     },
     {
       "team": "Swift",
@@ -220,7 +158,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 20,
+          "position": 19,
           "counts": true,
           "not_found": false
         },
@@ -229,7 +167,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 35,
+          "position": 36,
           "counts": true,
           "not_found": false
         },
@@ -238,7 +176,7 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 13,
+          "position": 11,
           "counts": true,
           "not_found": false
         },
@@ -247,7 +185,69 @@
           "score": 9,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 53,
+          "position": 54,
+          "counts": true,
+          "not_found": false
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "team": "MJ",
+      "total": 22,
+      "status": "active",
+      "players": [
+        {
+          "name": "Collin Morikawa",
+          "score": 3,
+          "made_cut": true,
+          "rounds_played": 4,
+          "position": 21,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Cameron Young",
+          "score": 8,
+          "made_cut": true,
+          "rounds_played": 4,
+          "position": 48,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "J.J. Spaun",
+          "score": 8,
+          "made_cut": false,
+          "rounds_played": 2,
+          "position": 110,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Keegan Bradley",
+          "score": 6,
+          "made_cut": true,
+          "rounds_played": 4,
+          "position": 38,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Jason Day",
+          "score": 7,
+          "made_cut": false,
+          "rounds_played": 1,
+          "position": 156,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Ryan Fox",
+          "score": 5,
+          "made_cut": true,
+          "rounds_played": 4,
+          "position": 24,
           "counts": true,
           "not_found": false
         }
@@ -264,7 +264,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 34,
+          "position": 35,
           "counts": true,
           "not_found": false
         },
@@ -291,7 +291,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 19,
+          "position": 18,
           "counts": true,
           "not_found": false
         },
@@ -326,7 +326,7 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 15,
+          "position": 14,
           "counts": true,
           "not_found": false
         },
@@ -362,7 +362,7 @@
           "score": 6,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 36,
+          "position": 37,
           "counts": true,
           "not_found": false
         },
@@ -388,7 +388,7 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 16,
+          "position": 15,
           "counts": true,
           "not_found": false
         },
@@ -397,7 +397,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 4,
-          "position": 18,
+          "position": 17,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-06-21T20:45:38Z"
+  "updated_at": "2026-06-21T22:02:05Z"
 }
