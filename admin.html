@@ -241,6 +241,7 @@ let activeTeamIdx = null;
 let poolName = 'Major Championship Pool 2026';
 let activeEvent = 'PGA Championship';
 let tournamentRounds = 4;
+let cutLowN = 70;   // players making the cut, "low N and ties" (per-major; from picks.json)
 
 function normalize(s) {
   return s.normalize('NFKD').replace(/[̀-ͯ]/g, '')
@@ -251,29 +252,62 @@ function parseScore(s) {
   if (s === null || s === undefined) return null;
   s = String(s).trim();
   if (s === 'E' || s === '0' || s === '') return 0;
-  return parseInt(s.replace('+', ''), 10);
+  const n = parseInt(s.replace('+', ''), 10);
+  return Number.isNaN(n) ? null : n;   // '-' placeholder -> null
+}
+
+// 36-hole (R1+R2) to-par, or null if either round is missing (WD/DQ/not-yet-played).
+function thirtySixHoleTotal(c) {
+  const by = {};
+  (c.linescores || []).forEach(x => { by[x.period] = x; });
+  const r1 = by[1] ? parseScore(by[1].displayValue) : null;
+  const r2 = by[2] ? parseScore(by[2].displayValue) : null;
+  if (r1 === null || r2 === null) return null;
+  return r1 + r2;
+}
+
+// Cut line = 36-hole to-par of the cutLowN-th best player ("low N and ties").
+function computeCutLine(competitors, cutLowN) {
+  const totals = competitors.map(thirtySixHoleTotal)
+    .filter(t => t !== null).sort((a, b) => a - b);
+  if (!totals.length) return null;
+  return totals.length >= cutLowN ? totals[cutLowN - 1] : totals[totals.length - 1];
 }
 
 async function loadPlayers() {
   try {
     const resp = await fetch(ESPN_URL);
     const data = await resp.json();
-    const ev = (data.events || [])[0];
+    // Multiple events can be live at once (a major + a same-week regular stop),
+    // so pick the one matching the active event name; fall back to the first.
+    const events = data.events || [];
+    const target = normalize(activeEvent || '');
+    const ev = events.find(e => normalize(e.name) === target
+      || normalize(e.shortName || '') === target) || events[0];
     if (!ev) {
       document.getElementById('players-list').innerHTML =
         '<div style="padding:20px;text-align:center;color:var(--gold);">No active PGA event in ESPN scoreboard. Player list available only during tournament weeks.</div>';
       return;
     }
     const comp = ev.competitions[0];
+    // ESPN exposes NO per-player cut flag. The 36-hole cut is applied after round 2,
+    // so before round 3 nobody is cut; from round 3 on, compute the cut line from
+    // 36-hole scores ("low N and ties"). Mirrors poller.py.
+    const currentRound = (comp.status && comp.status.period) || 1;
+    const cutApplied = currentRound >= 3;
+    const cutLine = cutApplied ? computeCutLine(comp.competitors, cutLowN) : null;
     players = comp.competitors.map(c => {
-      const linescores = c.linescores || [];
+      const t36 = thirtySixHoleTotal(c);
+      const made_cut = cutApplied
+        ? (cutLine !== null && t36 !== null && t36 <= cutLine)
+        : true;   // no cut before round 3 — everyone is still in
       return {
         id: c.id,
         name: c.athlete.displayName,
         key: normalize(c.athlete.displayName),
         score: parseScore(c.score),
         position: c.order || 999,
-        made_cut: linescores.length >= tournamentRounds
+        made_cut: made_cut
       };
     });
     // If activeEvent input is empty, default to current event
@@ -295,6 +329,7 @@ async function loadCurrentPicks() {
     poolName = data.pool_name || poolName;
     activeEvent = data.active_event_name || activeEvent;
     tournamentRounds = data.tournament_rounds || 4;
+    cutLowN = data.cut_low_n || cutLowN;
     document.getElementById('pool-name').value = poolName;
     document.getElementById('active-event').value = activeEvent;
     // Convert names to IDs once players have loaded
