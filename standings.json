@@ -1,7 +1,7 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "The Open",
-  "event_status": "Round 1 - In Progress",
+  "event_status": "Round 1 - Play Complete",
   "competitor_count": 156,
   "current_round": 1,
   "cut_line": null,
@@ -388,7 +388,7 @@
           "score": 8,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 153,
+          "position": 154,
           "counts": false,
           "not_found": false
         },
@@ -406,7 +406,7 @@
           "score": 7,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 149,
+          "position": 150,
           "counts": true,
           "not_found": false
         },
@@ -424,7 +424,7 @@
           "score": 7,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 148,
+          "position": 149,
           "counts": true,
           "not_found": false
         },
@@ -433,7 +433,7 @@
           "score": 7,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 147,
+          "position": 148,
           "counts": true,
           "not_found": false
         }
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-16T21:00:24Z"
+  "updated_at": "2026-07-16T22:04:19Z"
 }
