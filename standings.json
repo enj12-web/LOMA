@@ -1,8 +1,61 @@
 {
   "pool_name": "Major Championship Pool 2026",
-  "event_name": "U.S. Open",
-  "event_status": "Waiting for U.S. Open \u2014 current PGA event: The Open",
-  "teams": [],
+  "event_name": "The Open",
+  "event_status": "Round 1 - In Progress",
+  "competitor_count": 156,
+  "current_round": 1,
+  "cut_line": null,
+  "teams": [
+    {
+      "team": "EJ",
+      "total": null,
+      "status": "DQ",
+      "players": [],
+      "rank": null
+    },
+    {
+      "team": "RJ",
+      "total": null,
+      "status": "DQ",
+      "players": [],
+      "rank": null
+    },
+    {
+      "team": "Yates",
+      "total": null,
+      "status": "DQ",
+      "players": [],
+      "rank": null
+    },
+    {
+      "team": "Stude",
+      "total": null,
+      "status": "DQ",
+      "players": [],
+      "rank": null
+    },
+    {
+      "team": "MJ",
+      "total": null,
+      "status": "DQ",
+      "players": [],
+      "rank": null
+    },
+    {
+      "team": "Lehman",
+      "total": null,
+      "status": "DQ",
+      "players": [],
+      "rank": null
+    },
+    {
+      "team": "Swift",
+      "total": null,
+      "status": "DQ",
+      "players": [],
+      "rank": null
+    }
+  ],
   "not_found_players": [],
-  "updated_at": "2026-07-16T14:09:03Z"
+  "updated_at": "2026-07-16T15:40:12Z"
 }
