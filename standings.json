@@ -1,9 +1,9 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "The Open",
-  "event_status": "Round 1 - Play Complete",
+  "event_status": "Round 2 - In Progress",
   "competitor_count": 156,
-  "current_round": 1,
+  "current_round": 2,
   "cut_line": null,
   "teams": [
     {
@@ -25,7 +25,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 131,
+          "position": 132,
           "counts": false,
           "not_found": false
         },
@@ -34,7 +34,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 24,
+          "position": 25,
           "counts": true,
           "not_found": false
         },
@@ -43,7 +43,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 43,
+          "position": 44,
           "counts": false,
           "not_found": false
         },
@@ -52,7 +52,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 27,
+          "position": 28,
           "counts": true,
           "not_found": false
         },
@@ -61,7 +61,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 23,
+          "position": 24,
           "counts": true,
           "not_found": false
         }
@@ -105,7 +105,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 20,
+          "position": 21,
           "counts": true,
           "not_found": false
         },
@@ -114,7 +114,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 42,
+          "position": 43,
           "counts": true,
           "not_found": false
         },
@@ -123,7 +123,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 29,
+          "position": 30,
           "counts": true,
           "not_found": false
         }
@@ -158,7 +158,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 44,
+          "position": 45,
           "counts": true,
           "not_found": false
         },
@@ -229,7 +229,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 45,
+          "position": 46,
           "counts": true,
           "not_found": false
         },
@@ -309,7 +309,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 18,
+          "position": 19,
           "counts": true,
           "not_found": false
         }
@@ -326,7 +326,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 28,
+          "position": 29,
           "counts": true,
           "not_found": false
         },
@@ -344,7 +344,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 1,
-          "position": 139,
+          "position": 141,
           "counts": false,
           "not_found": false
         },
@@ -380,7 +380,7 @@
     },
     {
       "team": "Lehman",
-      "total": 27,
+      "total": 26,
       "status": "active",
       "players": [
         {
@@ -412,10 +412,10 @@
         },
         {
           "name": "Max Greyserman",
-          "score": 6,
+          "score": 5,
           "made_cut": true,
-          "rounds_played": 1,
-          "position": 144,
+          "rounds_played": 2,
+          "position": 136,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-17T03:32:00Z"
+  "updated_at": "2026-07-17T06:00:13Z"
 }
