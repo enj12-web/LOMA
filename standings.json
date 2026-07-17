@@ -7,132 +7,8 @@
   "cut_line": null,
   "teams": [
     {
-      "team": "Swift",
-      "total": -11,
-      "status": "active",
-      "players": [
-        {
-          "name": "Rory McIlroy",
-          "score": -1,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 39,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Robert MacIntyre",
-          "score": -4,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 10,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Viktor Hovland",
-          "score": 4,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 121,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Patrick Reed",
-          "score": -2,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 24,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Shane Lowry",
-          "score": -3,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 17,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Corey Conners",
-          "score": -2,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 27,
-          "counts": true,
-          "not_found": false
-        }
-      ],
-      "rank": 1
-    },
-    {
-      "team": "RJ",
-      "total": -10,
-      "status": "active",
-      "players": [
-        {
-          "name": "J.J. Spaun",
-          "score": -3,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 15,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Brian Harman",
-          "score": 7,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 139,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Alex Fitzpatrick",
-          "score": -4,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 7,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Russell Henley",
-          "score": 0,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 66,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Tyrrell Hatton",
-          "score": -1,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 48,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Collin Morikawa",
-          "score": -2,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 34,
-          "counts": true,
-          "not_found": false
-        }
-      ],
-      "rank": 2
-    },
-    {
       "team": "Yates",
-      "total": -10,
+      "total": -13,
       "status": "active",
       "players": [
         {
@@ -140,7 +16,7 @@
           "score": 4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 119,
+          "position": 116,
           "counts": false,
           "not_found": false
         },
@@ -149,7 +25,7 @@
           "score": -5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 4,
+          "position": 6,
           "counts": true,
           "not_found": false
         },
@@ -158,16 +34,16 @@
           "score": 1,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 73,
+          "position": 70,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Si Woo Kim",
-          "score": -3,
+          "score": -5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 23,
+          "position": 7,
           "counts": true,
           "not_found": false
         },
@@ -176,25 +52,87 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 96,
+          "position": 97,
           "counts": false,
           "not_found": false
         },
         {
           "name": "Jon Rahm",
-          "score": -3,
+          "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 22,
+          "position": 11,
           "counts": true,
           "not_found": false
         }
       ],
-      "rank": 3
+      "rank": 1
+    },
+    {
+      "team": "RJ",
+      "total": -12,
+      "status": "active",
+      "players": [
+        {
+          "name": "J.J. Spaun",
+          "score": -3,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 18,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Brian Harman",
+          "score": 8,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 141,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Alex Fitzpatrick",
+          "score": -4,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 9,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Russell Henley",
+          "score": 1,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 72,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Tyrrell Hatton",
+          "score": -3,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 21,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Collin Morikawa",
+          "score": -2,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 35,
+          "counts": true,
+          "not_found": false
+        }
+      ],
+      "rank": 2
     },
     {
       "team": "MJ",
-      "total": -9,
+      "total": -11,
       "status": "active",
       "players": [
         {
@@ -208,19 +146,19 @@
         },
         {
           "name": "Jordan Spieth",
-          "score": 6,
+          "score": 10,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 132,
+          "position": 151,
           "counts": false,
           "not_found": false
         },
         {
           "name": "Bryson DeChambeau",
-          "score": -5,
+          "score": -7,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 5,
+          "position": 2,
           "counts": true,
           "not_found": false
         },
@@ -229,7 +167,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 14,
+          "position": 17,
           "counts": true,
           "not_found": false
         },
@@ -247,7 +185,69 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 12,
+          "position": 13,
+          "counts": true,
+          "not_found": false
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "team": "Swift",
+      "total": -11,
+      "status": "active",
+      "players": [
+        {
+          "name": "Rory McIlroy",
+          "score": -1,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 40,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Robert MacIntyre",
+          "score": -4,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 15,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Viktor Hovland",
+          "score": 4,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 119,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Patrick Reed",
+          "score": -2,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 25,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Shane Lowry",
+          "score": -3,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 20,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Corey Conners",
+          "score": -2,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 28,
           "counts": true,
           "not_found": false
         }
@@ -255,78 +255,16 @@
       "rank": 4
     },
     {
-      "team": "Stude",
-      "total": -7,
-      "status": "active",
-      "players": [
-        {
-          "name": "Xander Schauffele",
-          "score": 0,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 56,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Cameron Young",
-          "score": -6,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 2,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Joaqu\u00edn Niemann",
-          "score": 4,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 113,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Justin Thomas",
-          "score": -3,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 21,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Aaron Rai",
-          "score": 2,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 87,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Keith Mitchell",
-          "score": 3,
-          "made_cut": true,
-          "rounds_played": 2,
-          "position": 101,
-          "counts": false,
-          "not_found": false
-        }
-      ],
-      "rank": 5
-    },
-    {
       "team": "EJ",
-      "total": -4,
+      "total": -6,
       "status": "active",
       "players": [
         {
           "name": "Tommy Fleetwood",
-          "score": -2,
+          "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 37,
+          "position": 10,
           "counts": true,
           "not_found": false
         },
@@ -335,7 +273,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 30,
+          "position": 31,
           "counts": true,
           "not_found": false
         },
@@ -344,7 +282,7 @@
           "score": 3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 106,
+          "position": 98,
           "counts": false,
           "not_found": false
         },
@@ -362,7 +300,7 @@
           "score": 2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 82,
+          "position": 84,
           "counts": true,
           "not_found": false
         },
@@ -371,8 +309,70 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 25,
+          "position": 26,
           "counts": true,
+          "not_found": false
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "team": "Stude",
+      "total": -5,
+      "status": "active",
+      "players": [
+        {
+          "name": "Xander Schauffele",
+          "score": 0,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 56,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Cameron Young",
+          "score": -6,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 3,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Joaqu\u00edn Niemann",
+          "score": 4,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 109,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Justin Thomas",
+          "score": -1,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 47,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Aaron Rai",
+          "score": 2,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 89,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Keith Mitchell",
+          "score": 3,
+          "made_cut": true,
+          "rounds_played": 2,
+          "position": 101,
+          "counts": false,
           "not_found": false
         }
       ],
@@ -388,7 +388,7 @@
           "score": 9,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 146,
+          "position": 144,
           "counts": true,
           "not_found": false
         },
@@ -397,7 +397,7 @@
           "score": 9,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 145,
+          "position": 143,
           "counts": false,
           "not_found": false
         },
@@ -415,7 +415,7 @@
           "score": 5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 122,
+          "position": 123,
           "counts": true,
           "not_found": false
         },
@@ -424,7 +424,7 @@
           "score": 8,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 144,
+          "position": 142,
           "counts": true,
           "not_found": false
         },
@@ -433,7 +433,7 @@
           "score": 9,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 147,
+          "position": 145,
           "counts": false,
           "not_found": false
         }
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-17T18:40:45Z"
+  "updated_at": "2026-07-17T19:43:41Z"
 }
