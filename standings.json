@@ -43,7 +43,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 45,
+          "position": 43,
           "counts": true,
           "not_found": false
         },
@@ -52,7 +52,7 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 19,
+          "position": 16,
           "counts": true,
           "not_found": false
         },
@@ -61,7 +61,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 46,
+          "position": 44,
           "counts": false,
           "not_found": false
         }
@@ -70,7 +70,7 @@
     },
     {
       "team": "RJ",
-      "total": -1,
+      "total": -2,
       "status": "active",
       "players": [
         {
@@ -78,7 +78,7 @@
           "score": 0,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 56,
+          "position": 55,
           "counts": true,
           "not_found": false
         },
@@ -93,10 +93,10 @@
         },
         {
           "name": "Alex Fitzpatrick",
-          "score": 0,
+          "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 57,
+          "position": 48,
           "counts": true,
           "not_found": false
         },
@@ -105,7 +105,7 @@
           "score": -1,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 40,
+          "position": 38,
           "counts": false,
           "not_found": false
         },
@@ -137,10 +137,10 @@
       "players": [
         {
           "name": "Tommy Fleetwood",
-          "score": -6,
+          "score": -5,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 7,
+          "position": 10,
           "counts": true,
           "not_found": false
         },
@@ -185,7 +185,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 44,
+          "position": 42,
           "counts": true,
           "not_found": false
         }
@@ -208,10 +208,10 @@
         },
         {
           "name": "Sam Burns",
-          "score": -8,
+          "score": -9,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 3,
+          "position": 1,
           "counts": true,
           "not_found": false
         },
@@ -226,10 +226,10 @@
         },
         {
           "name": "Si Woo Kim",
-          "score": -7,
+          "score": -8,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 5,
+          "position": 3,
           "counts": true,
           "not_found": false
         },
@@ -244,10 +244,10 @@
         },
         {
           "name": "Jon Rahm",
-          "score": -3,
+          "score": -4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 27,
+          "position": 18,
           "counts": true,
           "not_found": false
         }
@@ -264,16 +264,16 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 14,
+          "position": 12,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Cameron Young",
-          "score": -5,
+          "score": -4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 12,
+          "position": 20,
           "counts": true,
           "not_found": false
         },
@@ -291,7 +291,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 23,
+          "position": 24,
           "counts": true,
           "not_found": false
         },
@@ -341,10 +341,10 @@
         },
         {
           "name": "Bryson DeChambeau",
-          "score": -5,
+          "score": -6,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 10,
+          "position": 8,
           "counts": true,
           "not_found": false
         },
@@ -353,7 +353,7 @@
           "score": -6,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 6,
+          "position": 7,
           "counts": true,
           "not_found": false
         },
@@ -368,10 +368,10 @@
         },
         {
           "name": "Scottie Scheffler",
-          "score": -5,
+          "score": -4,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 9,
+          "position": 19,
           "counts": true,
           "not_found": false
         }
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-18T17:28:45Z"
+  "updated_at": "2026-07-18T18:25:55Z"
 }
