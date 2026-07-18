@@ -16,7 +16,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 20,
+          "position": 25,
           "counts": true,
           "not_found": false
         },
@@ -40,10 +40,10 @@
         },
         {
           "name": "Russell Henley",
-          "score": 0,
+          "score": -1,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 58,
+          "position": 49,
           "counts": false,
           "not_found": false
         },
@@ -52,7 +52,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 23,
+          "position": 28,
           "counts": true,
           "not_found": false
         },
@@ -61,7 +61,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 39,
+          "position": 47,
           "counts": true,
           "not_found": false
         }
@@ -75,10 +75,10 @@
       "players": [
         {
           "name": "Rory McIlroy",
-          "score": -1,
+          "score": 0,
           "made_cut": true,
-          "rounds_played": 2,
-          "position": 52,
+          "rounds_played": 3,
+          "position": 63,
           "counts": false,
           "not_found": false
         },
@@ -105,7 +105,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 29,
+          "position": 38,
           "counts": true,
           "not_found": false
         },
@@ -114,7 +114,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 22,
+          "position": 27,
           "counts": true,
           "not_found": false
         },
@@ -123,7 +123,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 32,
+          "position": 41,
           "counts": true,
           "not_found": false
         }
@@ -149,7 +149,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 35,
+          "position": 44,
           "counts": true,
           "not_found": false
         },
@@ -185,7 +185,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 30,
+          "position": 39,
           "counts": true,
           "not_found": false
         }
@@ -217,10 +217,10 @@
         },
         {
           "name": "Brooks Koepka",
-          "score": 2,
+          "score": 1,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 74,
+          "position": 66,
           "counts": false,
           "not_found": false
         },
@@ -235,10 +235,10 @@
         },
         {
           "name": "Min Woo Lee",
-          "score": 3,
+          "score": 2,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 76,
+          "position": 70,
           "counts": false,
           "not_found": false
         },
@@ -264,7 +264,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 18,
+          "position": 19,
           "counts": true,
           "not_found": false
         },
@@ -273,7 +273,7 @@
           "score": -6,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 2,
+          "position": 3,
           "counts": true,
           "not_found": false
         },
@@ -288,10 +288,10 @@
         },
         {
           "name": "Justin Thomas",
-          "score": -1,
+          "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 48,
+          "position": 22,
           "counts": true,
           "not_found": false
         },
@@ -353,7 +353,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 19,
+          "position": 24,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-18T11:13:30Z"
+  "updated_at": "2026-07-18T12:03:26Z"
 }
