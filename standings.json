@@ -16,7 +16,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 18,
+          "position": 20,
           "counts": true,
           "not_found": false
         },
@@ -34,16 +34,16 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 9,
+          "position": 10,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Russell Henley",
-          "score": 1,
+          "score": 0,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 69,
+          "position": 58,
           "counts": false,
           "not_found": false
         },
@@ -52,7 +52,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 21,
+          "position": 23,
           "counts": true,
           "not_found": false
         },
@@ -61,7 +61,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 37,
+          "position": 39,
           "counts": true,
           "not_found": false
         }
@@ -78,7 +78,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 43,
+          "position": 52,
           "counts": false,
           "not_found": false
         },
@@ -87,7 +87,7 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 15,
+          "position": 16,
           "counts": true,
           "not_found": false
         },
@@ -105,7 +105,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 27,
+          "position": 29,
           "counts": true,
           "not_found": false
         },
@@ -114,7 +114,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 20,
+          "position": 22,
           "counts": true,
           "not_found": false
         },
@@ -123,7 +123,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 30,
+          "position": 32,
           "counts": true,
           "not_found": false
         }
@@ -140,7 +140,7 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 10,
+          "position": 11,
           "counts": true,
           "not_found": false
         },
@@ -149,7 +149,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 33,
+          "position": 35,
           "counts": true,
           "not_found": false
         },
@@ -185,7 +185,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 28,
+          "position": 30,
           "counts": true,
           "not_found": false
         }
@@ -211,16 +211,16 @@
           "score": -5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 5,
+          "position": 6,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Brooks Koepka",
-          "score": 3,
+          "score": 2,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 77,
+          "position": 74,
           "counts": false,
           "not_found": false
         },
@@ -229,16 +229,16 @@
           "score": -5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 6,
+          "position": 7,
           "counts": true,
           "not_found": false
         },
         {
           "name": "Min Woo Lee",
-          "score": 2,
+          "score": 3,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 73,
+          "position": 76,
           "counts": false,
           "not_found": false
         },
@@ -247,7 +247,7 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 11,
+          "position": 12,
           "counts": true,
           "not_found": false
         }
@@ -261,10 +261,10 @@
       "players": [
         {
           "name": "Xander Schauffele",
-          "score": 0,
+          "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 60,
+          "position": 18,
           "counts": true,
           "not_found": false
         },
@@ -290,8 +290,8 @@
           "name": "Justin Thomas",
           "score": -1,
           "made_cut": true,
-          "rounds_played": 2,
-          "position": 50,
+          "rounds_played": 3,
+          "position": 48,
           "counts": true,
           "not_found": false
         },
@@ -344,7 +344,7 @@
           "score": -5,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 7,
+          "position": 8,
           "counts": true,
           "not_found": false
         },
@@ -353,7 +353,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 17,
+          "position": 19,
           "counts": true,
           "not_found": false
         },
@@ -371,7 +371,7 @@
           "score": -4,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 13,
+          "position": 14,
           "counts": true,
           "not_found": false
         }
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-18T10:06:15Z"
+  "updated_at": "2026-07-18T11:13:30Z"
 }
