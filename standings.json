@@ -1,7 +1,7 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "The Open",
-  "event_status": "Round 3 - In Progress",
+  "event_status": "Round 3 - Play Complete",
   "competitor_count": 156,
   "current_round": 3,
   "cut_line": 0,
@@ -16,7 +16,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 33,
+          "position": 32,
           "counts": true,
           "not_found": false
         },
@@ -25,7 +25,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 28,
+          "position": 27,
           "counts": true,
           "not_found": false
         },
@@ -123,7 +123,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 36,
+          "position": 35,
           "counts": true,
           "not_found": false
         }
@@ -208,7 +208,7 @@
         },
         {
           "name": "Sam Burns",
-          "score": -9,
+          "score": -10,
           "made_cut": true,
           "rounds_played": 3,
           "position": 1,
@@ -270,10 +270,10 @@
         },
         {
           "name": "Cameron Young",
-          "score": -4,
+          "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 20,
+          "position": 28,
           "counts": true,
           "not_found": false
         },
@@ -291,7 +291,7 @@
           "score": -3,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 24,
+          "position": 23,
           "counts": true,
           "not_found": false
         },
@@ -344,7 +344,7 @@
           "score": -6,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 8,
+          "position": 7,
           "counts": true,
           "not_found": false
         },
@@ -353,7 +353,7 @@
           "score": -6,
           "made_cut": true,
           "rounds_played": 3,
-          "position": 7,
+          "position": 6,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-18T18:25:55Z"
+  "updated_at": "2026-07-18T19:37:46Z"
 }
