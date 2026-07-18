@@ -43,7 +43,7 @@
           "score": 1,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 67,
+          "position": 69,
           "counts": false,
           "not_found": false
         },
@@ -61,7 +61,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 35,
+          "position": 37,
           "counts": true,
           "not_found": false
         }
@@ -78,7 +78,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 39,
+          "position": 43,
           "counts": false,
           "not_found": false
         },
@@ -105,7 +105,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 25,
+          "position": 27,
           "counts": true,
           "not_found": false
         },
@@ -123,7 +123,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 28,
+          "position": 30,
           "counts": true,
           "not_found": false
         }
@@ -149,7 +149,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 31,
+          "position": 33,
           "counts": true,
           "not_found": false
         },
@@ -185,7 +185,7 @@
           "score": -2,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 26,
+          "position": 28,
           "counts": true,
           "not_found": false
         }
@@ -217,10 +217,10 @@
         },
         {
           "name": "Brooks Koepka",
-          "score": 1,
+          "score": 3,
           "made_cut": false,
-          "rounds_played": 2,
-          "position": 75,
+          "rounds_played": 3,
+          "position": 77,
           "counts": false,
           "not_found": false
         },
@@ -235,10 +235,10 @@
         },
         {
           "name": "Min Woo Lee",
-          "score": 1,
+          "score": 2,
           "made_cut": false,
           "rounds_played": 3,
-          "position": 69,
+          "position": 73,
           "counts": false,
           "not_found": false
         },
@@ -263,8 +263,8 @@
           "name": "Xander Schauffele",
           "score": 0,
           "made_cut": true,
-          "rounds_played": 2,
-          "position": 58,
+          "rounds_played": 3,
+          "position": 60,
           "counts": true,
           "not_found": false
         },
@@ -291,7 +291,7 @@
           "score": -1,
           "made_cut": true,
           "rounds_played": 2,
-          "position": 46,
+          "position": 50,
           "counts": true,
           "not_found": false
         },
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-18T08:54:40Z"
+  "updated_at": "2026-07-18T10:06:15Z"
 }
