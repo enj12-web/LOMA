@@ -626,6 +626,7 @@ function buildPicksJson() {
     pool_name: document.getElementById('pool-name').value || 'Major Pool',
     active_event_name: document.getElementById('active-event').value || 'PGA Championship',
     tournament_rounds: tournamentRounds,
+    cut_low_n: cutLowN,
     teams: {}
   };
   teams.forEach(t => {

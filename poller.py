@@ -15,6 +15,15 @@ from pathlib import Path
 ESPN_URL = "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard"
 ROOT = Path(__file__).parent
 
+# Per-major cut rule ("low N and ties"). Fallback when picks.json omits cut_low_n
+# — a missing field must NOT silently default to the wrong major's cut.
+CUT_LOW_N_BY_EVENT = {
+    "masters tournament": 50,
+    "pga championship": 70,
+    "u.s. open": 60,
+    "the open": 70,
+}
+
 
 def normalize(name: str) -> str:
     # Strip accents (Åberg -> Aberg, Niemann unchanged, García -> Garcia)
@@ -220,7 +229,10 @@ def main():
     picks = json.loads((ROOT / "picks.json").read_text())
     target_event = picks.get("active_event_name")
     rounds = picks.get("tournament_rounds", 4)
-    cut_low_n = picks.get("cut_low_n", 60)
+    # Prefer the explicit picks.json value; otherwise infer from the event name
+    # (defaults to 70, the most common major cut) rather than a blind constant.
+    cut_low_n = picks.get("cut_low_n") or CUT_LOW_N_BY_EVENT.get(
+        normalize(target_event or ""), 70)
 
     try:
         data = fetch_scoreboard()

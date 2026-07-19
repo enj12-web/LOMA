@@ -1,11 +1,73 @@
 {
   "pool_name": "Major Championship Pool 2026",
   "event_name": "The Open",
-  "event_status": "Round 3 - Play Complete",
+  "event_status": "Round 4 - In Progress",
   "competitor_count": 156,
-  "current_round": 3,
-  "cut_line": 0,
+  "current_round": 4,
+  "cut_line": 1,
   "teams": [
+    {
+      "team": "Yates",
+      "total": -22,
+      "status": "active",
+      "players": [
+        {
+          "name": "Matt Fitzpatrick",
+          "score": 4,
+          "made_cut": false,
+          "rounds_played": 2,
+          "position": 116,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Sam Burns",
+          "score": -10,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 1,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Brooks Koepka",
+          "score": 0,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 50,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Si Woo Kim",
+          "score": -8,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 3,
+          "counts": true,
+          "not_found": false
+        },
+        {
+          "name": "Min Woo Lee",
+          "score": 2,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 64,
+          "counts": false,
+          "not_found": false
+        },
+        {
+          "name": "Jon Rahm",
+          "score": -4,
+          "made_cut": true,
+          "rounds_played": 3,
+          "position": 18,
+          "counts": true,
+          "not_found": false
+        }
+      ],
+      "rank": 1
+    },
     {
       "team": "Swift",
       "total": -10,
@@ -66,11 +128,11 @@
           "not_found": false
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "team": "RJ",
-      "total": -2,
+      "total": -4,
       "status": "active",
       "players": [
         {
@@ -103,10 +165,10 @@
         {
           "name": "Russell Henley",
           "score": -1,
-          "made_cut": false,
+          "made_cut": true,
           "rounds_played": 3,
           "position": 38,
-          "counts": false,
+          "counts": true,
           "not_found": false
         },
         {
@@ -115,7 +177,7 @@
           "made_cut": true,
           "rounds_played": 3,
           "position": 63,
-          "counts": true,
+          "counts": false,
           "not_found": false
         },
         {
@@ -128,7 +190,7 @@
           "not_found": false
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "team": "EJ",
@@ -186,68 +248,6 @@
           "made_cut": true,
           "rounds_played": 3,
           "position": 42,
-          "counts": true,
-          "not_found": false
-        }
-      ],
-      "rank": null
-    },
-    {
-      "team": "Yates",
-      "total": null,
-      "status": "DQ",
-      "players": [
-        {
-          "name": "Matt Fitzpatrick",
-          "score": 4,
-          "made_cut": false,
-          "rounds_played": 2,
-          "position": 116,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Sam Burns",
-          "score": -10,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 1,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Brooks Koepka",
-          "score": 0,
-          "made_cut": false,
-          "rounds_played": 3,
-          "position": 50,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Si Woo Kim",
-          "score": -8,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 3,
-          "counts": true,
-          "not_found": false
-        },
-        {
-          "name": "Min Woo Lee",
-          "score": 2,
-          "made_cut": false,
-          "rounds_played": 3,
-          "position": 64,
-          "counts": false,
-          "not_found": false
-        },
-        {
-          "name": "Jon Rahm",
-          "score": -4,
-          "made_cut": true,
-          "rounds_played": 3,
-          "position": 18,
           "counts": true,
           "not_found": false
         }
@@ -442,5 +442,5 @@
     }
   ],
   "not_found_players": [],
-  "updated_at": "2026-07-19T04:31:20Z"
+  "updated_at": "2026-07-19T07:03:48Z"
 }
